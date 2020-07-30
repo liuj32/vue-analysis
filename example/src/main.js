@@ -1,14 +1,27 @@
 import Vue from 'vue'
-import App from './App'
-import router from './router'
-// import Vuex from 'vuex';
 
+let childComp = {
+  template: '<div>{{msg}}</div>',
+  created() {
+    console.log('child created')
+  },
+  mounted() {
+    console.log('child mounted')
+  },
+  data() {
+    return {
+      msg: 'Hello Vue'
+    }
+  }
+}
 
-/* eslint-disable no-new */
-new Vue({
+Vue.mixin({
+  created() {
+    console.log('parent created')
+  }
+})
+
+let app = new Vue({
   el: '#app',
-  router,
-  // store,
-  template: '<App/>',
-  components: { App }
+  render: h => h(childComp)
 })

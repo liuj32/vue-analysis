@@ -14,11 +14,15 @@ mountComponent() => vm._update(vm._render(), hyrating)
 总结：new Vue => init => $mount =>  compile => render => vnode => patch => Dom
 
 
+## 组件化
+* createComponent()
+  3个核心步骤： 构造子类构造函数 -> 安装组件钩子函数 -> 实例化vnode
 
+* patch
 
-
-
-
-
-
-
+* 合并配置
+  
+* 生命周期
+  
+* 组件注册
+  

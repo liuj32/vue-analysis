@@ -1,12 +1,18 @@
 <template>
   <div id="app">
-      <router-view></router-view>
+      <!-- <router-view></router-view> -->
+    <hello-world></hello-world>
   </div>
 </template>
 
 <script>
+import HelloWorld from '@/components/Home'
+
 export default {
   name: 'app',
+  components: {
+    HelloWorld
+  }
 }
 </script>
 
